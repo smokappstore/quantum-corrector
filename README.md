@@ -1,8 +1,13 @@
-# quantum-corrector
+# Quantum-corrector
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Qiskit](https://img.shields.io/badge/qiskit-^0.44.0-purple.svg)
+![Hardware](https://img.shields.io/badge/hardware-IBM%20Quantum-red.svg)
+![Estado](https://img.shields.io/badge/status-dev-yellowgreen.svg)
+<br/>
 Corrección Dinámica Adaptativa: El sistema puede ajustar automáticamente la frecuencia de corrección basada en la evolución del error. Modelado Realista de Errores: Incluye correlaciones temporales y espaciales entre errores, no solo errores independientes. 
-# Implementación de QEC en Hardware Cuántico Real
+## Implementación de QEC en Hardware Cuántico Real
 
-## Resumen del Sistema
+### Resumen del Sistema
 
 El código implementa un **código de corrección cuántica de 3 qubits** que puede detectar y corregir errores de bit-flip en un qubit lógico. Este es uno de los códigos más simples pero efectivos para demostrar los principios de QEC.
 
@@ -13,6 +18,19 @@ El código implementa un **código de corrección cuántica de 3 qubits** que pu
 - **Medición**: Tasa de error lógico vs físico
 
 ## Flujo de Trabajo para Hardware Real
+
+Puedes ajustar el comportamiento del sistema usando flags adicionales en la línea de comandos o al ejecutar scripts. Ejemplos de flags soportados:
+
+| Flag                       | Descripción                                                    | Ejemplo                          |
+|----------------------------|----------------------------------------------------------------|----------------------------------|
+| `--backend <nombre>`       | Selecciona el backend de hardware cuántico                     | `--backend ibm_brisbane`         |
+| `--dynamic`                | Activa el uso de circuitos dinámicos en hardware               | `--dynamic`                      |
+| `--shots <n>`              | Número de mediciones (shots) por ciclo                         | `--shots 1000`                   |
+| `--num-cycles <n>`         | Número de ciclos de corrección                                 | `--num-cycles 10`                |
+| `--simulate`               | Ejecuta el sistema en modo simulación (FakeBackend)            | `--simulate`                     |
+| `--optimization-level <n>` | Nivel de optimización al transpilar el circuito (0-3)           | `--optimization-level 3`         |
+| `--layout-method <m>`      | Método de layout para asignación de qubits                     | `--layout-method sabre`          |
+| `--token <token>`          | Token de acceso para IBM Quantum                               | `--token TU_TOKEN`               |
 
 ### 1. Preparación del Entorno
 
