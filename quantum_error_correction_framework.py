@@ -2,11 +2,10 @@
 FRAMEWORK AVANZADO DE CORRECCIÓN DE ERRORES CUÁNTICOS
 Usando la Ecuación de Lindblad para Modelar Dinámicas de Error y Corrección
 
-Este framework extiende tu implementación básica para incluir:
-1. Códigos de corrección diversos (Shor, Steane, Surface codes)
-2. Procesos de detección y corrección dinámicos
-3. Métricas de rendimiento cuantitativas
-4. Optimización de protocolos
+* Códigos de corrección diversos (Shor, Steane, Surface codes)
+* Procesos de detección y corrección dinámicos
+* Métricas de rendimiento cuantitativas
+* Optimización de protocolos
 """
 
 import numpy as np
